@@ -58,7 +58,6 @@ export default function App() {
     setCurrentNumber(currentNumber + buttonPressed)
   }
 
-  render();{
     return (
       <View style={styles.container}>
 
@@ -84,8 +83,6 @@ export default function App() {
         </View>
       </View>
     );
-  }
-  
 }
 
 // Estilização
