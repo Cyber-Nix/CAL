@@ -58,18 +58,18 @@ export default function App() {
     setCurrentNumber(currentNumber + buttonPressed)
   }
 
+  render();{
+    return (
+      <View style={styles.container}>
 
-  return (
-    <View style={styles.container}>
+        {/* Area onde o resultado é exibido */}
+        <View style={styles.results}>
+          <Text style={styles.historyText}>{lastNumber}</Text>
+          <Text style={styles.resultText}>{currentNumber}</Text>
+        </View>
 
-      {/* Area onde o resultado é exibido */}
-      <View style={styles.results}>
-        <Text style={styles.historyText}>{lastNumber}</Text>
-        <Text style={styles.resultText}>{currentNumber}</Text>
-      <View>
-
-      {/* Area onde os botões são exibidos*/}
-      <View style={styles.buttons}>
+        {/* Area onde os botões são exibidos*/}
+        <View style={styles.buttons}>
 
         {buttons.map((button) => 
           button === '=' ? // Mapeamento do botão =
@@ -81,9 +81,11 @@ export default function App() {
             <Text style={[styles.textButton, {color: typeof(button) === 'number' ? 'black': '#0093a6'}]}>{button}</Text>
           </TouchableOpacity>
         )}
+        </View>
       </View>
-    </View>
-  );
+    );
+  }
+  
 }
 
 // Estilização
